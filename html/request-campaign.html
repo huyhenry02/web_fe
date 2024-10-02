@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campaign Pro</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="#" class="text-nowrap logo-img">
+            <img src="../assets/images/logos/dark-logo.svg" width="180" alt="" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Quản lý chiến dịch</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="list-campaign.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Danh sách chiến dịch</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" aria-expanded="false">
+                <span>
+                  <i class="ti ti-alert-circle"></i>
+                </span>
+                <span class="hide-menu">Yêu cầu phê duyệt</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Quản lý Creator</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Danh sách Creator</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" aria-expanded="false">
+                <span>
+                  <i class="ti ti-user-plus"></i>
+                </span>
+                <span class="hide-menu">Danh sách đen</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid">
+        <div class="card mt-4">
+          <div class="card-body">
+            <!-- Tiêu đề trang -->
+            <h5 class="card-title fw-semibold mb-4">Danh sách yêu cầu chờ duyệt</h5>
+
+            <!-- Tổng số yêu cầu chờ duyệt -->
+            <div class="mb-4">
+              <h6 class="fw-semibold">Tổng số yêu cầu chờ duyệt: <span id="total-requests">4</span></h6>
+            </div>
+
+            <!-- Danh sách yêu cầu -->
+            <table class="table table-bordered table-hover">
+              <thead class="thead-light">
+              <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên Creator</th>
+                <th scope="col">Số lượng người theo dõi</th>
+                <th scope="col">Liên kết mạng xã hội</th>
+                <th scope="col">Chiến dịch</th>
+                <th scope="col" class="text-lg-end">Hành động</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>Trần B</td>
+                <td>15,000</td>
+                <td><a href="https://facebook.com/creatorB">https://facebook.com/creatorB</a></td>
+                <td><a href="/campaign-detail/1">Chiến dịch A</a></td>
+                <td class="text-lg-end">
+                  <button class="btn btn-sm btn-success" onclick="openApproveModal('Trần B')">Duyệt</button>
+                  <button class="btn btn-sm btn-danger" onclick="openRejectModal('Trần B')">Từ chối</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Nguyễn C</td>
+                <td>20,000</td>
+                <td><a href="https://instagram.com/creatorC">https://instagram.com/creatorC</a></td>
+                <td><a href="/campaign-detail/2">Chiến dịch B</a></td>
+                <td class="text-lg-end">
+                  <button class="btn btn-sm btn-success" onclick="openApproveModal('Nguyễn C')">Duyệt</button>
+                  <button class="btn btn-sm btn-danger" onclick="openRejectModal('Nguyễn C')">Từ chối</button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Lê D</td>
+                <td>25,000</td>
+                <td><a href="https://youtube.com/creatorD">https://youtube.com/creatorD</a></td>
+                <td><a href="/campaign-detail/1">Chiến dịch A</a></td>
+                <td class="text-lg-end">
+                  <button class="btn btn-sm btn-success" onclick="openApproveModal('Lê D')">Duyệt</button>
+                  <button class="btn btn-sm btn-danger" onclick="openRejectModal('Lê D')">Từ chối</button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Phạm E</td>
+                <td>30,000</td>
+                <td><a href="https://tiktok.com/creatorE">https://tiktok.com/creatorE</a></td>
+                <td><a href="/campaign-detail/3">Chiến dịch C</a></td>
+                <td class="text-lg-end">
+                  <button class="btn btn-sm btn-success" onclick="openApproveModal('Phạm E')">Duyệt</button>
+                  <button class="btn btn-sm btn-danger" onclick="openRejectModal('Phạm E')">Từ chối</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal xác nhận duyệt -->
+      <div class="modal fade" id="approveModal" tabindex="-1" aria-labelledby="approveModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="approveModalLabel">Xác nhận duyệt yêu cầu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Bạn có chắc chắn muốn duyệt yêu cầu của <strong id="creatorNameApprove"></strong>?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+              <button type="button" class="btn btn-success">Xác nhận duyệt</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal xác nhận từ chối -->
+      <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="rejectModalLabel">Xác nhận từ chối yêu cầu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Bạn có chắc chắn muốn từ chối yêu cầu của <strong id="creatorNameReject"></strong>?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+              <button type="button" class="btn btn-danger">Xác nhận từ chối</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    function openApproveModal(creatorName) {
+      document.getElementById('creatorNameApprove').textContent = creatorName;
+      var approveModal = new bootstrap.Modal(document.getElementById('approveModal'));
+      approveModal.show();
+    }
+
+    function openRejectModal(creatorName) {
+      document.getElementById('creatorNameReject').textContent = creatorName;
+      var rejectModal = new bootstrap.Modal(document.getElementById('rejectModal'));
+      rejectModal.show();
+    }
+  </script>
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+</body>
+
+</html>
